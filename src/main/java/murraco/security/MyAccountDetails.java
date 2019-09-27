@@ -6,18 +6,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import murraco.model.User;
-import murraco.repository.UserRepository;
+import murraco.model.Account;
+import murraco.repository.AccountRepository;
 
 @Service
-public class MyUserDetails implements UserDetailsService {
+public class MyAccountDetails implements UserDetailsService {
 
   @Autowired
-  private UserRepository userRepository;
+  private AccountRepository userRepository;
 
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    final User user = userRepository.findByUsername(username);
+    final Account user = userRepository.findByUsername(username);
 
     if (user == null) {
       throw new UsernameNotFoundException("User '" + username + "' not found");

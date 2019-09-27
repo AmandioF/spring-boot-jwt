@@ -5,16 +5,24 @@ import java.util.List;
 import io.swagger.annotations.ApiModelProperty;
 import murraco.model.Role;
 
-public class UserDataDTO {
-  
+public class AccountResponseDTO {
+
   @ApiModelProperty(position = 0)
-  private String username;
+  private Integer id;
   @ApiModelProperty(position = 1)
-  private String email;
+  private String username;
   @ApiModelProperty(position = 2)
-  private String password;
+  private String email;
   @ApiModelProperty(position = 3)
   List<Role> roles;
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public String getUsername() {
     return username;
@@ -30,14 +38,6 @@ public class UserDataDTO {
 
   public void setEmail(String email) {
     this.email = email;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
   }
 
   public List<Role> getRoles() {

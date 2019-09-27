@@ -11,14 +11,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import murraco.model.Role;
-import murraco.model.User;
-import murraco.service.UserService;
+import murraco.model.Account;
+import murraco.service.AccountService;
 
 @SpringBootApplication
 public class JwtAuthServiceApp implements CommandLineRunner {
 
   @Autowired
-  UserService userService;
+  AccountService userService;
 
   public static void main(String[] args) {
     SpringApplication.run(JwtAuthServiceApp.class, args);
@@ -31,7 +31,7 @@ public class JwtAuthServiceApp implements CommandLineRunner {
 
   @Override
   public void run(String... params) throws Exception {
-    User admin = new User();
+    Account admin = new Account();
     admin.setUsername("admin");
     admin.setPassword("admin");
     admin.setEmail("admin@email.com");
@@ -39,7 +39,7 @@ public class JwtAuthServiceApp implements CommandLineRunner {
 
     userService.signup(admin);
 
-    User client = new User();
+    Account client = new Account();
     client.setUsername("client");
     client.setPassword("client");
     client.setEmail("client@email.com");

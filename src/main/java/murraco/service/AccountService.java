@@ -11,15 +11,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import murraco.exception.CustomException;
-import murraco.model.User;
-import murraco.repository.UserRepository;
+import murraco.model.Account;
+import murraco.repository.AccountRepository;
 import murraco.security.JwtTokenProvider;
 
 @Service
-public class UserService {
+public class AccountService {
 
   @Autowired
-  private UserRepository userRepository;
+  private AccountRepository userRepository;
 
   @Autowired
   private PasswordEncoder passwordEncoder;
@@ -39,7 +39,7 @@ public class UserService {
     }
   }
 
-  public String signup(User user) {
+  public String signup(Account user) {
     if (!userRepository.existsByUsername(user.getUsername())) {
       user.setPassword(passwordEncoder.encode(user.getPassword()));
       userRepository.save(user);
@@ -53,15 +53,15 @@ public class UserService {
     userRepository.deleteByUsername(username);
   }
 
-  public User search(String username) {
-    User user = userRepository.findByUsername(username);
+  public Account search(String username) {
+    Account user = userRepository.findByUsername(username);
     if (user == null) {
       throw new CustomException("The user doesn't exist", HttpStatus.NOT_FOUND);
     }
     return user;
   }
 
-  public User whoami(HttpServletRequest req) {
+  public Account whoami(HttpServletRequest req) {
     return userRepository.findByUsername(jwtTokenProvider.getUsername(jwtTokenProvider.resolveToken(req)));
   }
 
