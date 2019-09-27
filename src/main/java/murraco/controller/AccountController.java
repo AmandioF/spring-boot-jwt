@@ -41,8 +41,9 @@ public class AccountController {
   @ApiResponses(value = {//
       @ApiResponse(code = 400, message = "Something went wrong"), //
       @ApiResponse(code = 422, message = "Invalid username/password supplied")})
-  public String login(//
+  public String login(
      @RequestBody Login login) {
+	  System.out.println("-------------> " + login.toString());
     return userService.signin(login.getUsername(), login.getPassword());
   }
 

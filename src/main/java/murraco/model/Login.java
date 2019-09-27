@@ -17,4 +17,8 @@ public class Login {
 	public String getPassword() {
 		return this.password;
 	}
+	
+	public String toString() {
+		return "User: " + this.username + ", Password: " + this.password;
+	}
 }
