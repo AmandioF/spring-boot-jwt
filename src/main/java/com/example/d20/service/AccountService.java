@@ -19,16 +19,16 @@ import com.example.d20.security.JwtTokenProvider;
 @Service
 public class AccountService {
 
-  @Autowired
+  @Autowired(required=true)
   private AccountRepository userRepository;
 
-  @Autowired
+  @Autowired(required=true)
   private PasswordEncoder passwordEncoder;
 
-  @Autowired
+  @Autowired(required=true)
   private JwtTokenProvider jwtTokenProvider;
 
-  @Autowired
+  @Autowired(required=true)
   private AuthenticationManager authenticationManager;
 
   public String signin(String username, String password) {
