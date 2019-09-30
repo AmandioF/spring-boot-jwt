@@ -15,13 +15,13 @@ import com.example.d20.model.Role;
 import com.example.d20.service.AccountService;
 
 @SpringBootApplication
-public class JwtAuthServiceApp implements CommandLineRunner {
+public class D20Application implements CommandLineRunner {
 
   @Autowired
   AccountService userService;
 
   public static void main(String[] args) {
-    SpringApplication.run(JwtAuthServiceApp.class, args);
+    SpringApplication.run(D20Application.class, args);
   }
 
   @Bean
