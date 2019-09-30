@@ -1,4 +1,4 @@
-package murraco.exception;
+package com.example.d20.exception;
 
 import java.io.IOException;
 import java.util.Map;

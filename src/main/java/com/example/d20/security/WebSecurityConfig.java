@@ -1,4 +1,4 @@
-package murraco.security;
+package com.example.d20.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

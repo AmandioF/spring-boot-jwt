@@ -1,4 +1,4 @@
-package murraco;
+package com.example.d20;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,9 +10,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import murraco.model.Role;
-import murraco.model.Account;
-import murraco.service.AccountService;
+import com.example.d20.model.Account;
+import com.example.d20.model.Role;
+import com.example.d20.service.AccountService;
 
 @SpringBootApplication
 public class JwtAuthServiceApp implements CommandLineRunner {

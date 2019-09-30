@@ -1,4 +1,4 @@
-package murraco.model;
+package com.example.d20.model;
 
 import org.springframework.security.core.GrantedAuthority;
 

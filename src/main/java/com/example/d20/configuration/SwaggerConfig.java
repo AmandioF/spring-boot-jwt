@@ -1,4 +1,4 @@
-package murraco.configuration;
+package com.example.d20.configuration;
 
 import java.util.ArrayList;
 import java.util.Arrays;

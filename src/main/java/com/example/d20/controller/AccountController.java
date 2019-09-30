@@ -1,4 +1,4 @@
-package murraco.controller;
+package com.example.d20.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,16 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.d20.dto.AccountDataDTO;
+import com.example.d20.dto.AccountResponseDTO;
+import com.example.d20.model.Account;
+import com.example.d20.model.Login;
+import com.example.d20.service.AccountService;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import murraco.dto.AccountDataDTO;
-import murraco.dto.AccountResponseDTO;
-import murraco.model.Account;
-import murraco.model.Login;
-import murraco.service.AccountService;
 
 @RestController
 @RequestMapping("/users")

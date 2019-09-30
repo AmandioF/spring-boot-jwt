@@ -1,4 +1,4 @@
-package murraco.service;
+package com.example.d20.service;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,10 +10,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import murraco.exception.CustomException;
-import murraco.model.Account;
-import murraco.repository.AccountRepository;
-import murraco.security.JwtTokenProvider;
+import com.example.d20.exception.CustomException;
+import com.example.d20.model.Account;
+import com.example.d20.repository.AccountRepository;
+import com.example.d20.security.JwtTokenProvider;
 
 @Service
 public class AccountService {
